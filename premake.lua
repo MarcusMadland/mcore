@@ -1,11 +1,10 @@
 project "mcore"
 	kind "StaticLib"
 	language "C++"
-	cppdialect "C++17"
-	staticruntime "on"
-
-	targetdir ("binaries/" .. "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}" .. "/%{prj.name}")
-	objdir ("intermediate/" .. "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}" .. "/%{prj.name}")
+	cppdialect "C++14"
+	exceptionhandling "Off"
+	rtti "Off"
+	defines "__STDC_FORMAT_MACROS"
 
 	files
 	{
