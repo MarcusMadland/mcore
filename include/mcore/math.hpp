@@ -78,6 +78,11 @@ namespace mcore {
         matrix[10] = scale[2];
     }
 
-    
+    // Linearly interpolate between two values
+    template <typename T>
+    T lerp(const T& a, const T& b, float t)
+    {
+        return a + (b - a) * t;
+    }
 
 }  // namespace mcore
